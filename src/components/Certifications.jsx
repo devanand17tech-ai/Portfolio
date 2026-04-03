@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, BookOpen, Trophy } from 'lucide-react';
+import { Award, BookOpen, Trophy, ExternalLink } from 'lucide-react';
 
 const Certifications = () => {
   const sections = [
@@ -12,6 +12,7 @@ const Certifications = () => {
           name: "Java Developer Core to Advance",
           issuer: "Board-Infinity",
           date: "Jun '25 - Jul '25",
+          link: "https://drive.google.com/file/d/1eOb2hw25GwUniGkrxiy1jcNJ2QxUD3-2/view?usp=sharing",
           desc: "Intensive training covering OOPs, multi-threading, Spring Boot RESTful design, MongoDB, and secure JWT authentication."
         }
       ]
@@ -24,13 +25,22 @@ const Certifications = () => {
           name: "Master Generative AI & Generative AI tools",
           issuer: "Udemy",
           date: "Aug '25",
+          link: "https://drive.google.com/file/d/1e3inp52gx8QHAxFp-G3EfTlpn7U9dEV5/view?usp=sharing",
           desc: "Comprehensive coursework on modern Generative AI tooling and ChatGPT applications."
         },
         {
           name: "Build Generative AI Apps with No Code Tools",
           issuer: "Udemy",
           date: "Aug '25",
+          link: "https://drive.google.com/file/d/1-3g2ZaCMkvB7ryiXqL7D-vO7a0rx9rrC/view?usp=sharing",
           desc: "Creation of AI-driven solutions without traditional coding methodologies."
+        },
+        {
+          name: "MySQL (Basic)",
+          issuer: "HackerRank",
+          date: "Apr '26",
+          link: "https://drive.google.com/file/d/151MHiUSo6fxYOCTiNclVLyQg8IuVmh0p/view?usp=sharing",
+          desc: "Demonstrated fundamental knowledge of SQL queries, relationships, and basic database management."
         }
       ]
     },
@@ -87,7 +97,14 @@ const Certifications = () => {
                     <div className="absolute w-2 h-2 bg-primary rounded-full -left-[5px] top-2"></div>
                     <h4 className="text-lg font-semibold text-white leading-tight mb-1">{item.name}</h4>
                     <div className="flex justify-between items-center text-sm mb-2">
-                      <span className="text-primary font-medium">{item.issuer}</span>
+                      {item.link ? (
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:text-white hover:underline flex items-center gap-1 transition-colors">
+                          {item.issuer}
+                          <ExternalLink size={14} />
+                        </a>
+                      ) : (
+                        <span className="text-primary font-medium">{item.issuer}</span>
+                      )}
                       <span className="text-text/50">{item.date}</span>
                     </div>
                     <p className="text-sm text-text/70">{item.desc}</p>

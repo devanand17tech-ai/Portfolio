@@ -22,7 +22,8 @@ const Contact = () => {
           </p>
 
           <a 
-            href="mailto:devanand17.tech@gmail.com" 
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=devanand17.tech@gmail.com&su=Contact+from+Portfolio&body=Hi+Devanand,+I+saw+your+portfolio+and+would+like+to+connect+with+you." 
+            target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-full font-medium hover:bg-blue-600 transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 mb-16 text-lg"
           >
             <Mail size={20} />
@@ -43,7 +44,7 @@ const Contact = () => {
             </div>
             <div>
               <p className="text-sm text-text/60">Email</p>
-              <a href="mailto:devanand17.tech@gmail.com" className="text-white hover:text-primary font-medium transition-colors text-sm sm:text-base break-all">devanand17.tech@gmail.com</a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=devanand17.tech@gmail.com&su=Contact+from+Portfolio&body=Hi+Devanand,+I+saw+your+portfolio+and+would+like+to+connect+with+you." target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary font-medium transition-colors text-sm sm:text-base break-all">devanand17.tech@gmail.com</a>
             </div>
           </motion.div>
           
